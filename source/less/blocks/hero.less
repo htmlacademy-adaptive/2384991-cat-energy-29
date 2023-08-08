@@ -1,17 +1,26 @@
 .hero {
   margin-bottom: 20px;
-
-  .wrapper {
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85) 63%, #ffffff 37%), url("../img/main/index-hero.jpg");
-    background-repeat: no-repeat;
-    text-align: center;
-    padding-top: 27px;
-    background-size: 100%, 100% auto;
-  }
 }
 
 .hero__container {
-  background-image: linear-gradient(#64a73c 63%, #ffffff 37%);
+  background-color: #64a73c;
+
+  .wrapper {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/main/index-hero.jpg");
+    background-color: #64a73c;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    text-align: center;
+    padding-top: 27px;
+    min-height: 302px;
+    margin-bottom: 138px;
+    position: relative;
+  }
+}
+
+.hero__text {
+  padding-bottom: 135px;
 }
 
 .hero__title {
@@ -33,12 +42,20 @@
 }
 
 .hero__image {
-  display: block;
-  margin-bottom: 3px;
+  position: absolute;
+  background-image: url("../img/main/index-can-mobile.png");
+  content: "";
+  width: 280px;
+  height: 270px;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
 }
 
 .hero__link {
   font-size: 14px;
   line-height: 18px;
-  padding: 11px 44px;
+  display: block;
+  width: 280px;
+  text-align: center;
 }

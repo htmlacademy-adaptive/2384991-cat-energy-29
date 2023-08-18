@@ -9,9 +9,53 @@
   }
 }
 
+.main-header__logo {
+  display: block;
+}
+
 .main-header__logo-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .main-header {
+    padding-top: 25px;
+  }
+
+  .main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 470px;
+  }
+
+  .main-nav__list {
+    flex-direction: row;
+    gap: 33px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-header__logo-text {
+    position: relative;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header {
+    padding-top: 55px;
+  }
 }

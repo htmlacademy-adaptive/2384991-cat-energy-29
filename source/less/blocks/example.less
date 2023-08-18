@@ -1,18 +1,17 @@
 .example {
   background-color: #eaeaea;
-
-  .wrapper {
-    padding-top: 25px;
-    padding-bottom: 40px;
-  }
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 40px;
 }
 
 .example__title {
   font-size: 36px;
-  line-height: 36px;
+  line-height: 100%;
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 40px;
+  padding-left: 20px;
 }
 
 .example__description {
@@ -44,6 +43,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  gap: 32px;
 }
 
 .example__wrapper {
@@ -53,8 +53,8 @@
   justify-content: center;
   border: 1px solid #cdcdcd;
   border-radius: 2px;
-  width: 124px;
-  height: 56px;
+  min-width: 124px;
+  min-height: 56px;
 }
 
 .example__text {
@@ -65,4 +65,115 @@
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+}
+
+.example-cat {
+  width: 280px;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    background-color: #ffffff;
+    padding-top: 45px;
+  }
+
+  .example__title {
+    font-size: 60px;
+    margin-bottom: 60px;
+    padding-left: 30px;
+  }
+
+  .example__description {
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 55px;
+  }
+
+  .example__subtitle {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example__desc {
+    font-size: 14px;
+  }
+
+  .example__wrapper {
+    min-width: 162px;
+    min-height: 72px;
+  }
+
+  .example__container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    gap: 43px;
+  }
+
+  .example__information {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 99px;
+  }
+
+  .example__text {
+    text-align: right;
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+
+  .example__price {
+    display: block;
+    margin-top: 10px;
+    align-items: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    padding-top: 0;
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 436px 560px;
+      column-gap: 224px;
+      row-gap: 69px;
+    }
+  }
+
+  .example-cat {
+    grid-row: 1/3;
+    grid-column: 2/3;
+  }
+
+  .example__title {
+    margin-bottom: 76px;
+    padding-left: 110px;
+  }
+
+  .example__description {
+    margin-bottom: 0;
+  }
+
+  .example__information {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+
+  .example__text {
+    text-align: left;
+  }
+
+  .example__price {
+    margin-top: 0;
+    display: inline-block;
+  }
+
+  .example__container {
+    margin-bottom: 55px;
+  }
 }

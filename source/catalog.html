@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="./css/style.css" rel="stylesheet">
   </head>
@@ -34,9 +35,9 @@
       <h1 class="page__title">Каталог продукции</h1>
       <section class="catalog style-line--top">
         <h2 class="visually-hidden">Самые популярные товары</h2>
-        <ul class="catalog__list style-list">
+        <ul class="catalog__list style-list wrapper">
           <li class="catalog__item style-line">
-            <article class="catalog__card wrapper">
+            <article class="catalog__card">
             <a class="catalog__link catalog__link--wrapper" href="#">
               <img class="catalog__image" src="./img/catalog/chicken-500.png" width="68" height="86" alt="Банка корма со вкусом курицы 500 граммов">
             </a>
@@ -63,7 +64,7 @@
             </article>
           </li>
           <li class="catalog__item style-line">
-            <article class="catalog__card wrapper">
+            <article class="catalog__card">
             <a class="catalog__link catalog__link--wrapper" href="#">
               <img class="catalog__image" src="./img/catalog/chicken-1000.png" width="84" height="100" alt="Банка корма со вкусом курицы 1000 граммов">
             </a>
@@ -90,7 +91,7 @@
             </article>
           </li>
           <li class="catalog__item style-line">
-            <article class="catalog__card wrapper">
+            <article class="catalog__card">
             <a class="catalog__link catalog__link--wrapper" href="#">
               <img class="catalog__image" src="./img/catalog/fish-500.png" width="68" height="86" alt="Банка корма со вкусом рыбы 500 граммов">
             </a>
@@ -117,7 +118,7 @@
             </article>
           </li>
           <li class="catalog__item style-line">
-            <article class="catalog__card wrapper">
+            <article class="catalog__card">
             <a class="catalog__link catalog__link--wrapper" href="#">
               <img class="catalog__image" src="./img/catalog/fish-1000.png" width="84" height="100" alt="Банка корма со вкусом рыбы 1000 граммов">
             </a>
@@ -144,7 +145,7 @@
             </article>
           </li>
           <li class="catalog__item style-line">
-            <article class="catalog__card wrapper">
+            <article class="catalog__card">
             <a class="catalog__link catalog__link--wrapper" href="#">
               <img class="catalog__image" src="./img/catalog/buckwheat-500.png" width="68" height="86" alt="Банка корма со вкусом гречки 500 граммов">
             </a>
@@ -171,7 +172,7 @@
             </article>
           </li>
           <li class="catalog__item style-line">
-            <article class="catalog__card wrapper">
+            <article class="catalog__card">
             <a class="catalog__link catalog__link--wrapper" href="#">
               <img class="catalog__image" src="./img/catalog/buckwheat-1000.png" width="84" height="100" alt="Банка корма со вкусом гречки 1000 граммов">
             </a>
@@ -198,7 +199,7 @@
             </article>
           </li>
           <li class="catalog__item style-line">
-            <article class="catalog__card wrapper">
+            <article class="catalog__card">
             <a class="catalog__link catalog__link--wrapper" href="#">
               <img class="catalog__image" src="./img/catalog/rice-500.png" width="68" height="86" alt="Банка корма со вкусом риса 500 граммов">
             </a>
@@ -225,7 +226,7 @@
             </article>
           </li>
           <li class="catalog__item catalog__item--show-all style-line">
-            <article class="catalog__card catalog__card--all wrapper">
+            <article class="catalog__card catalog__card--all">
               <h3 class="catalog__subtitle catalog__subtitle--all">Показать еще 100500 товаров</h3>
               <p class="catalog__description">На самом деле вкусов гораздо больше!</p>
               <a class="catalog__link button catalog__link--all" href="#">показать все</a>
@@ -234,30 +235,38 @@
         </ul>
       </section>
       <section class="catalog-additional">
-        <div class="wrapper">
         <h2 class="catalog-additional__title">Дополнительные товары</h2>
+        <div class="wrapper">
         <div class="catalog-additional__wrapper style-line--top">
+          <div class="catalog-additional__information">
           <h3 class="catalog-additional__subtitle">Сахарозаменитель</h3>
           <span class="catalog-additional__text">1 упаковка (100 г)</span>
           <span class="catalog-additional__price">200 ₽</span>
+          </div>
           <a class="catalog-additional__link button button--primary " href="#">Заказать</a>
         </div>
         <div class="catalog-additional__wrapper style-line--top">
+          <div class="catalog-additional__information">
           <h3 class="catalog-additional__subtitle">питьевая вода</h3>
           <span class="catalog-additional__text">5 литров</span>
           <span class="catalog-additional__price">50 ₽</span>
+          </div>
           <a class="catalog-additional__link button button--primary" href="#">Заказать</a>
         </div>
         <div class="catalog-additional__wrapper style-line--top">
+          <div class="catalog-additional__information">
           <h3 class="catalog-additional__subtitle">молоко</h3>
           <span class="catalog-additional__text">1 литр</span>
           <span class="catalog-additional__price">100 ₽</span>
+        </div>
           <a class="catalog-additional__link button button--primary" href="#">Заказать</a>
         </div>
-        <div class="catalog-additional__wrapper style-line--top">
+        <div class="catalog-additional__wrapper style-line style-line--top">
+          <div class="catalog-additional__information">
           <h3 class="catalog-additional__subtitle">витамины</h3>
           <span class="catalog-additional__text">1 упаковка (30 г)</span>
           <span class="catalog-additional__price">300 ₽</span>
+        </div>
           <a class="catalog-additional__link button button--primary" href="#">Заказать</a>
         </div>
         <div class="catalog-additional__banner">
@@ -271,7 +280,7 @@
           <h2 class="visually-hidden">Адрес Кэт Энерджи</h2>
           <div class="map__adress-wrapper">
             <p class="map__description">приглашаем к сотрудничеству дилеров!</p>
-            <p class="map__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <p class="map__adress">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8<br><span class="map__city">Санкт-Петербург</span></p>
           </div>
           <img class="map__image" src="./img/map-mobile.jpg" width="320" height="363" alt="Карта с расположением Кэт Энерджи">
         </div>

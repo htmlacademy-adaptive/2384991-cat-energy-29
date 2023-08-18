@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="./css/style.css" rel="stylesheet">
   </head>
@@ -33,11 +34,12 @@
     <main class="page__main">
       <h1 class="page__title page__title-form">Подбор программы</h1>
       <section class="form">
-        <div class="wrapper">
         <h2 class="visually-hidden">Анкета для подбора программы питания</h2>
-        <p class="form-description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <p class="form__description">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
         <form class="form-filters" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="form-filters__information">
           <fieldset class="form-filters__group">
+            <div class="wrapper">
             <legend class="visually-hidden">Персональные данные кота</legend>
             <label class="form-filters__label">
               <span class="form-filters__text">Имя:*</span>
@@ -51,12 +53,12 @@
               <span class="form-filters__text">Возраст (лет):</span>
               <input class="form-filters__input" type="text" name="cat-age" value="7" placeholder="Укажите возраст">
             </label>
+          </div>
           </fieldset>
-            </div>
           <fieldset class="form-filters__group style-line style-line--top">
             <legend class="visually-hidden">Цель программы питания:</legend>
             <div class="wrapper">
-            <ul class="form-filters__list form-filters__list-programs style-list">
+            <ul class="form-filters__list form-filters__list--programs style-list">
               <li class="form-filters__item">
                 <label class="form-filters__control">
                   <input class="form-filters__control-input form-filters__control-input--checked" type="radio" name="goal" value="slim" checked>
@@ -78,27 +80,29 @@
             </ul>
           </div>
           </fieldset>
-          <div class="wrapper">
+        </div>
           <fieldset class="form-filters__group form-filters__group--contacts">
             <legend class="form-filters__title">Контактные данные (владельца кота)</legend>
-            <label class="form-filters__label form-filters__label--contacts">
+            <div class="form-filters__contact-information wrapper">
+            <label class="form-filters__label form-filters__label--email">
               <span class="form-filters__text">E-mail:*</span>
               <input class="form-filters__input" type="email" name="owner-email" value="kuklachev@gmail.com" placeholder="Укажите e-mail" required>
             </label>
-            <label class="form-filters__label">
+            <label class="form-filters__label form-filters__label--phone">
               <span class="form-filters__text">Телефон:*</span>
               <input class="form-filters__input" type="tel" name="owner-phone" value="8 (960) 900-60-90" placeholder="Укажите номер" required>
             </label>
+          </div>
           </fieldset>
           <fieldset class="form-filters__group">
             <legend class="form-filters__title">Комментарий</legend>
-            <label class="form-filters__label">
+            <label class="form-filters__label wrapper">
               <textarea class="form-filters__comment" name="comment" rows="5">Расскажите обо всех повадках кота</textarea>
             </label>
           </fieldset>
-          <fieldset class="form-filters__group">
+          <fieldset class="form-filters__group form-filters__group--additional">
             <legend class="form-filters__title">Дополнительно</legend>
-            <ul class="form-filters__list form-filters__list-additional style-list">
+            <ul class="form-filters__list form-filters__list--additional style-list wrapper">
               <li class="form-filters__item">
                 <label class="form-filters__control">
                   <input class="form-filters__control-input" type="checkbox" name="sweetener" checked>
@@ -108,13 +112,13 @@
               <li class="form-filters__item">
                 <label class="form-filters__control">
                   <input class="form-filters__control-input" type="checkbox" name="milk">
-                  <span class="control-label">молоко</span>
+                  <span class="control-label">питьевая вода</span>
                 </label>
               </li>
               <li class="form-filters__item">
                 <label class="form-filters__control">
                   <input class="form-filters__control-input" type="checkbox" name="water">
-                  <span class="control-label">питьевая вода</span>
+                  <span class="control-label">молоко</span>
                 </label>
               </li>
               <li class="form-filters__item">
@@ -125,17 +129,18 @@
               </li>
             </ul>
           </fieldset>
+          <div class="wrapper form-filters__wrapper">
           <button class="form-filters__button button button--primary" type="submit">отправить заявку</button>
           <span class="form-filters__description">* — Обязательные поля</span>
+        </div>
         </form>
-          </div>
       </section>
       <section class="map map--theme">
         <div class="wrapper">
           <h2 class="visually-hidden">Адрес Кэт Энерджи</h2>
           <div class="map__adress-wrapper">
             <p class="map__description">приглашаем к сотрудничеству дилеров!</p>
-            <p class="map__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <p class="map__adress">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8<br><span class="map__city">Санкт-Петербург</span></p>
           </div>
           <img class="map__image" src="./img/map-mobile.jpg" width="320" height="363" alt="Карта с расположением Кэт Энерджи">
         </div>

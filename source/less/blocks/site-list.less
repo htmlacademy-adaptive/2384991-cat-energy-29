@@ -4,3 +4,14 @@
   text-transform: uppercase;
   color: #000000;
 }
+
+@media (min-width: @tablet-width) {
+  .site-list__link {
+    font-size: 18px;
+  }
+
+  .site-list__item--current {
+    padding-bottom: 8px;
+    border-bottom: 2px solid @basic-green;
+  }
+}

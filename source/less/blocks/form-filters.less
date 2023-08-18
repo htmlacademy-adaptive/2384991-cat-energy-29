@@ -1,0 +1,244 @@
+.form-filters__text,
+.form-filters__comment,
+.form-filters__list,
+.form-filters__input {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @special-dark-gray;
+}
+
+.form-filters__group {
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.form-filters__label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  align-items: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form-filters__input {
+  flex-grow: 1;
+  margin-left: 13px;
+  padding: 13px 14px 12px 14px;
+  border: 1px solid #e7e7e7;
+}
+
+.form-filters__comment {
+  padding: 13px 14px 12px 14px;
+  border: 1px solid #e7e7e7;
+  width: 100%;
+  min-height: 150px;
+  margin-top: 38px;
+}
+
+.form-filters__group--contacts {
+  margin-top: 2px;
+
+  .form-filters__title {
+    margin-bottom: 35px;
+  }
+}
+
+.form-filters__list--programs {
+  padding: 22px 0 19px 0;
+}
+
+.form-filters__list--additional {
+  margin: 34px 0 10px 0;
+}
+
+.form-filters__item:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.form-filters__title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  padding-left: 20px;
+  padding-right: 113px;
+}
+
+.form-filters__button {
+  margin-bottom: 21px;
+}
+
+.form-filters__description {
+  display: block;
+  min-width: 153px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .form-filters__text,
+  .form-filters__comment,
+  .form-filters__list,
+  .form-filters__input {
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  .form-filters__label {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-filters__input {
+    padding: 10px 19px;
+  }
+
+  .form-filters__group.style-line,
+  .form-filters__group.style-line--top {
+    border: none;
+  }
+
+  .form-filters__group {
+    margin-top: 0;
+    margin-bottom: 65px;
+  }
+
+  .form-filters__list {
+    padding: 28px 27px 32px 27px;
+    margin-top: 7px;
+  }
+
+  .form-filters__list--programs {
+    border: 1px solid #d9d9d9;
+  }
+
+  .form-filters__item:not(:last-child) {
+    margin-bottom: 23px;
+  }
+
+  .form-filters__title {
+    font-size: 36px;
+    line-height: 100%;
+    padding-left: 70px;
+  }
+
+  .form-filters__group--contacts {
+    .form-filters__title {
+      margin-bottom: 76px;
+    }
+  }
+
+  .form-filters__label--contacts {
+    margin-bottom: 20px;
+  }
+
+  .form-filters__comment {
+    margin-top: 87px;
+    padding: 10px 19px;
+  }
+
+  .form-filters__list--additional {
+    margin: 62px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 42px;
+    column-gap: 123px;
+
+    .form-filters__item {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-filters__group--additional {
+    margin-bottom: 59px;
+  }
+
+  .form-filters__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .form-filters__description {
+    min-width: 174px;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .form-filters__button {
+    font-size: 20px;
+    line-height: 100%;
+    margin-bottom: 0;
+    padding: 13px 45px;
+    min-height: 52px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-filters__information {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 110px;
+    align-items: center;
+
+    .wrapper {
+      padding: 0;
+    }
+  }
+
+  .form-filters__list--programs {
+    margin-left: 80px;
+    margin-top: 0;
+    padding: 30px 28px;
+  }
+
+  .form-filters__group {
+    margin-bottom: 70px;
+  }
+
+  .form-filters__contact-information {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-filters__label--email {
+    margin-bottom: 0;
+  }
+
+  .form-filters__label--phone {
+    margin-left: 80px;
+  }
+
+  .form-filters__title {
+    padding-left: 110px;
+  }
+
+  .form-filters__comment {
+    margin-top: 78px;
+    padding-top: 8px;
+  }
+
+  .form-filters__list--additional {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 0;
+    row-gap: 0;
+  }
+
+  .form-filters__wrapper {
+    gap: 80px;
+  }
+}

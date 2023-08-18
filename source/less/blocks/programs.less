@@ -5,7 +5,7 @@
 .programs__item-wrapper {
   padding: 21px 33px 22px 20px;
   background-color: @basic-gray;
-  width: 280px;
+  min-width: 280px;
 }
 
 .programs__title {
@@ -39,4 +39,68 @@
   background-repeat: no-repeat;
   background-size: 32px 10px;
   background-position: center right;
+}
+
+@media (min-width: @tablet-width) {
+  .programs {
+    .style-line {
+      border: none;
+    }
+  }
+
+  .programs__item-wrapper {
+    padding: 77px 316px 57px 52px;
+  }
+
+  .programs__title {
+    font-size: 36px;
+    line-height: 100%;
+    margin-bottom: 24px;
+  }
+
+  .programs__description {
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 52px;
+    padding-bottom: 0;
+  }
+
+  .programs__link {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .programs__item {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 71px;
+  }
+
+  .programs__item,
+  .programs__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .programs__item-wrapper {
+    padding: 77px 61px 55px 52px;
+  }
+
+  .programs__title {
+    margin-bottom: 73px;
+  }
+
+  .programs__description {
+    margin-bottom: 27px;
+  }
 }

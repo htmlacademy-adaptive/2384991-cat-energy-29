@@ -4,18 +4,20 @@
 
 .hero__container {
   background-color: #64a73c;
+  width: 100%;
 
   .wrapper {
     background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/main/index-hero.jpg");
     background-color: #64a73c;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     background-position: top;
     text-align: center;
     padding-top: 27px;
     min-height: 302px;
     margin-bottom: 138px;
     position: relative;
+    width: 320px;
   }
 }
 
@@ -45,6 +47,7 @@
   position: absolute;
   background-image: url("../img/main/index-can-mobile.png");
   content: "";
+  background-repeat: no-repeat;
   width: 280px;
   height: 270px;
   left: 50%;
@@ -56,6 +59,94 @@
   font-size: 14px;
   line-height: 18px;
   display: block;
-  width: 280px;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .hero__container {
+    background-color: transparent;
+
+    .wrapper {
+      background-image: none;
+      background-color: transparent;
+      padding: 65px 234px 0 90px;
+      padding-top: 65px;
+      padding-right: 234px;
+      margin: 0;
+      width: 768px;
+      min-height: 280px;
+      position: relative;
+    }
+  }
+
+  .hero {
+    margin-bottom: 526px;
+
+    .wrapper {
+      padding-left: 90px;
+    }
+  }
+
+  .hero__title {
+    color: #000000;
+    font-size: 60px;
+    line-height: 100%;
+    margin-bottom: 40px;
+    text-align: start;
+  }
+
+  .hero__description {
+    color: #000000;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: start;
+    margin-bottom: 0;
+  }
+
+  .hero__image {
+    background-image: url("../img/main/index-can-tablet.jpg");
+    width: 709px;
+    height: 609px;
+    z-index: -1;
+    top: 91%;
+    left: 0;
+    transform: none;
+  }
+
+  .hero__text {
+    padding-bottom: 50px;
+    background-color: transparent;
+  }
+
+  .hero__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    max-width: 100%;
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 20px;
+    min-height: 54px;
+    min-width: 244px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hero__text {
+    padding-bottom: 52px;
+  }
+
+  .hero__image {
+    background-image: url("../img/main/index-can-desktop.png");
+    top: 32px;
+    left: 77%;
+  }
+
+  .hero {
+    .wrapper {
+      padding-left: 110px;
+    }
+    margin-bottom: 266px;
+  }
 }

@@ -1,6 +1,5 @@
 .page__main {
   min-height: 100%;
-  padding-top: 27px;
 }
 
 .page__main-index {
@@ -11,11 +10,28 @@
   font-size: 36px;
   line-height: 100%;
   font-weight: 400;
-  width: 320px;
-  margin: 0 auto;
-  padding: 0 20px 41px 20px;
+  margin: 0;
+  padding: 27px 20px 41px 20px;
 }
 
 .page__title-form {
   padding-bottom: 37px;
 }
+
+@media (min-width: @tablet-width) {
+  .page__title {
+    font-size: 60px;
+    padding: 65px 30px 54px 30px;
+  }
+
+  .page__title-form {
+    padding-left: 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page__title {
+    padding: 74px 110px 54px 110px;
+  }
+}
+

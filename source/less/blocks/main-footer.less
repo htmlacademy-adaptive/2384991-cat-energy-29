@@ -23,17 +23,25 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
-  padding-top: 20px;
+  padding-top: 8px;
+  padding-bottom: 7px;
 
   .main-footer__link {
     height: 22px;
   }
 }
 
+.main-footer__link--social {
+  padding: 12px;
+}
+
+.main-footer__social-item {
+  display: block;
+}
+
 .footer-copyright {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 140px;
   align-items: center;
   min-height: 34px;
@@ -48,6 +56,30 @@
   display: block;
   padding: 7px 0;
   color: @special-dark-gray;
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+.main-footer__logo path {
+  fill: #111111;
+
+  &:hover {
+    fill: #3e3e3e;
+  }
+}
+
+.main-footer__icon path {
+  fill: #666666;
+
+  &:hover {
+    fill: @basic-green;
+  }
+
+  &:active {
+    fill: rgba(104, 183, 56, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {

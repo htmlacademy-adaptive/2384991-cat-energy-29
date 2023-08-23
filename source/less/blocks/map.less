@@ -11,6 +11,13 @@
   gap: 20px;
 }
 
+@media (min-width: @tablet-width) {
+  .map__adress-wrapper {
+    gap: 308px;
+    padding: 61px 70px;
+  }
+}
+
 .map__description {
   margin: 0;
   font-size: 16px;
@@ -19,6 +26,14 @@
   text-transform: uppercase;
   width: 140px;
   word-wrap: break-word;
+}
+
+@media (min-width: @tablet-width) {
+  .map__description {
+    font-size: 20px;
+    line-height: 130%;
+    width: 160px;
+  }
 }
 
 .map__adress {
@@ -32,6 +47,14 @@
   word-wrap: break-word;
 }
 
+@media (min-width: @tablet-width) {
+  .map__adress {
+    text-align: right;
+    font-size: 16px;
+    width: 160px;
+  }
+}
+
 .map--theme {
   background-color: @basic-gray;
   width: 100%;
@@ -43,24 +66,20 @@
   margin: 0 auto;
 }
 
+.map__location {
+  display: block;
+  border: none;
+  width: 100%;
+  margin: 0 auto;
+}
+
 @media (min-width: @tablet-width) {
-  .map__adress-wrapper {
-    gap: 308px;
-    padding: 61px 70px;
+  .map__location {
+    height: 400px;
   }
+}
 
-  .map__adress {
-    text-align: right;
-    font-size: 16px;
-    width: 160px;
-  }
-
-  .map__description {
-    font-size: 20px;
-    line-height: 130%;
-    width: 160px;
-  }
-
+@media (min-width: @tablet-width) {
   .map__city {
     display: block;
     margin-top: 20px;

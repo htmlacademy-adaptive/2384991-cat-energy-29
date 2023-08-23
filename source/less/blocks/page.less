@@ -14,24 +14,72 @@
   padding: 27px 20px 41px 20px;
 }
 
-.page__title-form {
-  padding-bottom: 37px;
-}
-
 @media (min-width: @tablet-width) {
   .page__title {
     font-size: 60px;
     padding: 65px 30px 54px 30px;
-  }
-
-  .page__title-form {
-    padding-left: 70px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page__title {
     padding: 74px 110px 54px 110px;
+  }
+}
+
+.page__title-form {
+  padding-bottom: 37px;
+}
+
+@media (min-width: @tablet-width) {
+  .page__title-form {
+    padding-left: 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page__title-form {
+    padding-left: 110px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page__body--index {
+    background-image: url("../img/main/index-background-desktop.jpg");
+    background-size: 50% 694px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    z-index: -1;
+    position: relative;
+
+    /*попытка сделать background-color без дополнительной обертки
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: #64a63b;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 694px;
+      z-index: -3;
+    */
+
+    .site-list__link {
+      color: #ffffff;
+    }
+
+    .site-list__link:hover,
+    .site-list__link:focus {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .site-list__link:disabled {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    .site-list__item--current {
+      border-bottom: 2px solid #ffffff;
+    }
   }
 }
 

@@ -1,0 +1,138 @@
+.main-nav {
+  min-height: 66px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 470px;
+    min-height: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    min-height: 59px;
+  }
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  content: "";
+  top: 66px;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__list {
+    flex-direction: row;
+    gap: 33px;
+    position: static;
+    content: "";
+    top: 0;
+    justify-content: flex-end;
+  }
+}
+
+.main-nav__toggle {
+  width: 24px;
+  height: 24px;
+  display: block;
+  background-color: transparent;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #000000;
+  top: 2px;
+  left: 0;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+}
+
+.main-nav--closed .main-nav__toggle:hover::before {
+  background-color: #444444;
+  box-shadow: 0 8px 0 0 #444444, 0 16px 0 0 #444444;
+}
+
+.main-nav--closed .main-nav__toggle:focus::before {
+  background-color: #8f8f8f;
+  box-shadow: 0 8px 0 0 #8f8f8f, 0 16px 0 0 #8f8f8f;
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 1.5px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav--opened .main-nav__toggle:hover::before,
+.main-nav--opened .main-nav__toggle:hover::after {
+  background-color: #444444;
+}
+
+.main-nav--opened .main-nav__toggle:focus::before,
+.main-nav--opened .main-nav__toggle:focus::after {
+  background-color: #8f8f8f;
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--nojs {
+    margin-bottom: 198px;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__toggle {
+    display: block;
+  }
+}

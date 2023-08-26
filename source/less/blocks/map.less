@@ -4,11 +4,39 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .map {
+    .wrapper {
+      position: relative;
+    }
+  }
+}
+
 .map__adress-wrapper {
   padding: 26px 20px;
   display: flex;
   justify-content: space-between;
   gap: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .map__adress-wrapper {
+    gap: 308px;
+    padding: 61px 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map__adress-wrapper {
+    position: absolute;
+    background-color: #ffffff;
+    width: 565px;
+    height: 199px;
+    gap: 0;
+    padding: 60px 78px 60px 80px;
+    top: 95px;
+    left: 110px;
+  }
 }
 
 .map__description {
@@ -19,6 +47,14 @@
   text-transform: uppercase;
   width: 140px;
   word-wrap: break-word;
+}
+
+@media (min-width: @tablet-width) {
+  .map__description {
+    font-size: 20px;
+    line-height: 130%;
+    width: 160px;
+  }
 }
 
 .map__adress {
@@ -32,6 +68,14 @@
   word-wrap: break-word;
 }
 
+@media (min-width: @tablet-width) {
+  .map__adress {
+    text-align: right;
+    font-size: 16px;
+    width: 160px;
+  }
+}
+
 .map--theme {
   background-color: @basic-gray;
   width: 100%;
@@ -43,24 +87,20 @@
   margin: 0 auto;
 }
 
+.map__location {
+  display: block;
+  border: none;
+  width: 100%;
+  margin: 0 auto;
+}
+
 @media (min-width: @tablet-width) {
-  .map__adress-wrapper {
-    gap: 308px;
-    padding: 61px 70px;
+  .map__location {
+    height: 400px;
   }
+}
 
-  .map__adress {
-    text-align: right;
-    font-size: 16px;
-    width: 160px;
-  }
-
-  .map__description {
-    font-size: 20px;
-    line-height: 130%;
-    width: 160px;
-  }
-
+@media (min-width: @tablet-width) {
   .map__city {
     display: block;
     margin-top: 20px;

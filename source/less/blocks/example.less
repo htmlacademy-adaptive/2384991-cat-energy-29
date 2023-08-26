@@ -9,19 +9,24 @@
   .example {
     background: linear-gradient(to top, #eaeaea 43%, transparent 43%, transparent 100%);
     padding-top: 45px;
+    padding-bottom: 101px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .example {
     padding-top: 0;
-    background: linear-gradient(to top, #eaeaea 77%, transparent 77%, transparent 100%);
+    padding-bottom: 75px;
+
+    background: linear-gradient(to top, #f2f2f2 77%, transparent 77%, transparent 100%);
 
     .wrapper {
       display: grid;
       grid-template-columns: 436px 560px;
       column-gap: 224px;
       row-gap: 69px;
+      max-width: 1440px;
+      margin: 0 auto;
     }
   }
 }
@@ -45,8 +50,10 @@
 
 @media (min-width: @desktop-width) {
   .example__title {
-    margin-bottom: 76px;
     padding-left: 110px;
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-bottom: 76px;
   }
 }
 
@@ -222,6 +229,7 @@
 @media (min-width: @desktop-width) {
   .example__price {
     margin-top: 0;
+    margin-left: 63px;
     display: inline-block;
   }
 }

@@ -4,6 +4,14 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .map {
+    .wrapper {
+      position: relative;
+    }
+  }
+}
+
 .map__adress-wrapper {
   padding: 26px 20px;
   display: flex;
@@ -15,6 +23,19 @@
   .map__adress-wrapper {
     gap: 308px;
     padding: 61px 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map__adress-wrapper {
+    position: absolute;
+    background-color: #ffffff;
+    width: 565px;
+    height: 199px;
+    gap: 0;
+    padding: 60px 78px 60px 80px;
+    top: 95px;
+    left: 110px;
   }
 }
 

@@ -6,6 +6,10 @@
   padding-top: 0;
 }
 
+.page__title-form {
+  padding-bottom: 37px;
+}
+
 .page__title {
   font-size: 36px;
   line-height: 100%;
@@ -24,11 +28,9 @@
 @media (min-width: @desktop-width) {
   .page__title {
     padding: 74px 110px 54px 110px;
+    max-width: 1440px;
+    margin: 0 auto;
   }
-}
-
-.page__title-form {
-  padding-bottom: 37px;
 }
 
 @media (min-width: @tablet-width) {
@@ -45,24 +47,21 @@
 
 @media (min-width: @desktop-width) {
   .page__body--index {
-    background-image: url("../img/main/index-background-desktop.jpg");
-    background-size: 50% 694px;
-    background-repeat: no-repeat;
-    background-position: top right;
-    z-index: -1;
     position: relative;
 
-    /*попытка сделать background-color без дополнительной обертки
-    &::after {
+    &::before {
       position: absolute;
       content: "";
+      background-image: url("../img/main/index-background-desktop.jpg");
+      background-repeat: no-repeat;
+      background-position: top right;
       background-color: #64a63b;
       top: 0;
       right: 0;
       width: 50%;
       height: 694px;
       z-index: -3;
-    */
+    }
 
     .site-list__link {
       color: #ffffff;

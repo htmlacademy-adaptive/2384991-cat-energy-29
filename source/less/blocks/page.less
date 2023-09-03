@@ -6,16 +6,12 @@
   padding-top: 0;
 }
 
-.page__title-form {
-  padding-bottom: 37px;
-}
-
 .page__title {
   font-size: 36px;
   line-height: 100%;
   font-weight: 400;
   margin: 0;
-  padding: 27px 20px 41px 20px;
+  padding: 27px 20px 40px 20px;
 }
 
 @media (min-width: @tablet-width) {
@@ -31,6 +27,10 @@
     max-width: 1440px;
     margin: 0 auto;
   }
+}
+
+.page__title-form {
+  padding-bottom: 37px;
 }
 
 @media (min-width: @tablet-width) {
@@ -55,7 +55,7 @@
       background-image: url("../img/main/index-background-desktop.jpg");
       background-repeat: no-repeat;
       background-position: top right;
-      background-color: #64a63b;
+      background-color: #65a83d;
       top: 0;
       right: 0;
       width: 50%;
@@ -82,3 +82,11 @@
   }
 }
 
+@media (min-resolution: 2dppx) {
+  .page__body--index {
+    &::before {
+      background-image: url("../img/main/index-background-desktop@2x.jpg");
+      background-size: cover;
+    }
+  }
+}

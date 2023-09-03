@@ -7,7 +7,7 @@
     margin-bottom: 526px;
 
     .wrapper {
-      padding-left: 90px;
+      padding-left: 120px;
     }
   }
 }
@@ -42,6 +42,15 @@
   }
 }
 
+@media (min-resolution: 2dppx) {
+  .hero__container {
+    .wrapper {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/main/index-hero@2x.jpg");
+      background-size: cover;
+    }
+  }
+}
+
 @media (min-width: @tablet-width) {
   .hero__container {
     background-image: none;
@@ -49,7 +58,7 @@
     .wrapper {
       background-image: none;
       background-color: transparent;
-      padding: 65px 234px 0 90px;
+      padding: 65px 200px 0 120px;
       margin: 0;
       width: 768px;
       min-height: 280px;
@@ -90,6 +99,7 @@
   margin-top: 0;
   margin-bottom: 25px;
   color: #ffffff;
+  word-break: break-word;
 }
 
 @media (min-width: @tablet-width) {
@@ -128,9 +138,15 @@
   background-repeat: no-repeat;
   width: 280px;
   height: 270px;
-  left: 50%;
-  top: 100%;
-  transform: translate(-50%, -50%);
+  top: 55%;
+  left: 0;
+}
+
+@media (min-resolution: 2dppx) {
+  .hero__image {
+    background-image: url("../img/main/index-can-mobile@2x.png");
+    background-size: cover;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -140,16 +156,31 @@
     height: 609px;
     z-index: -1;
     top: 91%;
-    left: 0;
-    transform: none;
+    left: 30px;
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .hero__image {
+    background-image: url("../img/main/index-can-tablet@2x.jpg");
+    background-size: cover;
   }
 }
 
 @media (min-width: @desktop-width) {
   .hero__image {
     background-image: url("../img/main/index-can-desktop.png");
-    top: 32px;
-    left: 77%;
+    top: 29px;
+    left: 557px;
+    width: 552px;
+    height: 499px;
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .hero__image {
+    background-image: url("../img/main/index-can-desktop@2x.png");
+    background-size: cover;
   }
 }
 

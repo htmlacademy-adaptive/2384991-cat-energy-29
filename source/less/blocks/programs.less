@@ -27,7 +27,7 @@
 }
 
 .programs__item-wrapper {
-  padding: 30px 33px 22px 20px;
+  padding: 30px 33px 18px 20px;
   background-color: @basic-gray;
   min-width: 280px;
 }
@@ -40,7 +40,7 @@
 
 @media (min-width: @desktop-width) {
   .programs__item-wrapper {
-    padding: 77px 61px 55px 52px;
+    padding: 77px 61px 59px 52px;
   }
 }
 
@@ -101,8 +101,8 @@
     content: "";
     width: 67px;
     height: 50px;
-    top: 24px;
-    left: 13px;
+    top: 25px;
+    left: 12px;
     background-repeat: no-repeat;
     background-size: 100%;
   }
@@ -140,7 +140,7 @@
     }
 
     .programs__title {
-      padding-left: 181px;
+      padding-left: 162px;
     }
   }
 }
@@ -168,11 +168,6 @@
   }
 }
 
-@media (min-width: @desktop-width) {
-  .programs__description {
-    margin-bottom: 27px;
-  }
-}
 
 .programs__description {
   font-family: "Lato", sans-serif;
@@ -181,7 +176,7 @@
   line-height: 18px;
   color: @special-dark-gray;
   margin-top: 0;
-  padding-bottom: 23px;
+  padding-bottom: 22px;
   margin-bottom: 15px;
 }
 
@@ -194,6 +189,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .programs__description {
+    margin-bottom: 31px;
+  }
+}
+
 .programs__link {
   color: #000000;
   font-size: 16px;
@@ -203,7 +204,7 @@
   padding-right: 47px;
   background-image: url("../img/main/icon-arrow.svg");
   background-repeat: no-repeat;
-  background-size: 32px 10px;
+  background-size: 30px 12px;
   background-position: center right;
 
   &:hover {
@@ -229,6 +230,14 @@
       border: none;
     }
   }
+}
+
+.programs__list {
+  padding-bottom: 3px;
+}
+
+@media (min-width: @tablet-width) {
+  padding-bottom: 0;
 }
 
 @media (min-width: @desktop-width) {

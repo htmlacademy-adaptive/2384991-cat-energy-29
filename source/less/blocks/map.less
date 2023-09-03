@@ -16,7 +16,6 @@
   padding: 26px 20px;
   display: flex;
   justify-content: space-between;
-  gap: 20px;
 }
 
 @media (min-width: @tablet-width) {
@@ -35,7 +34,7 @@
     gap: 0;
     padding: 60px 78px 60px 80px;
     top: 95px;
-    left: 110px;
+    left: calc(50% - 610px);
   }
 }
 
@@ -83,8 +82,17 @@
 
 .map__image {
   display: block;
-  width: 320px;
+  min-width: 320px;
   margin: 0 auto;
+  width: 100%;
+  max-height: 362px;
+  object-fit: cover;
+}
+
+@media (min-width: @tablet-width) {
+  .map__image {
+    max-height: 400px;
+  }
 }
 
 .map__location {

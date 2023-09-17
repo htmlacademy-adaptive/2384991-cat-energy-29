@@ -100,7 +100,7 @@
 
 @media (min-width: @desktop-width) {
   .form-filters__group--additional {
-    margin-bottom: 62px;
+    margin-bottom: 64px;
   }
 }
 
@@ -176,6 +176,10 @@
 @media (min-width: @desktop-width) {
   .form-filters__label--email {
     margin-bottom: 0;
+
+    .form-filters__input {
+      background-position: top 17px right 15px;
+    }
   }
 
   .form-filters__label--phone {
@@ -232,7 +236,7 @@
   padding: 13px 14px 12px 14px;
   border: 1px solid #e7e7e7;
   width: 100%;
-  min-height: 150px;
+  min-height: 175px;
   resize: none;
 
   &:hover {
@@ -275,7 +279,7 @@
 @media (min-width: @tablet-width) {
   .form-filters__list--programs {
     border: 1px solid #d9d9d9;
-    padding: 28px 27px 32px 27px;
+    padding: 28px 27px 30px 27px;
     margin-top: 7px;
   }
 }
@@ -302,9 +306,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 42px;
-    column-gap: 123px;
+    column-gap: 62px;
 
-    .form-filters__item {
+    .form-filters__item:not(:last-child) {
       margin-bottom: 0;
     }
   }
@@ -355,12 +359,12 @@
     &::before {
       content: "";
       border-bottom: 2px solid @basic-green;
-      height: 22px;
+      height: 24px;
       width: 30px;
     }
 
     &::after {
-      height: 22px;
+      height: 24px;
       width: 18%;
     }
   }
@@ -389,7 +393,8 @@
     line-height: 100%;
     margin-bottom: 0;
     padding: 13px 45px;
-    min-height: 52px;
+    min-height: 54px;
+    min-width: 284px;
   }
 }
 
@@ -450,7 +455,7 @@
 
 @media (min-width: @tablet-width) {
   .form-filters__control-input {
-    top: -4px;
+    top: -6px;
     width: 40px;
     height: 40px;
   }
@@ -465,6 +470,13 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 18px 13px;
+}
+
+@media (min-width: @tablet-width) {
+  .form-filters__checkbox:checked {
+    background-position: center 12px;
+    background-size: 25px 18px;
+  }
 }
 
 
@@ -486,8 +498,8 @@
 
 @media (min-width: @tablet-width) {
   .form-filters__radio:checked + .form-filters__control-label::before {
-    top: 7px;
-    left: 11px;
+    top: 5px;
+    left: 10px;
     width: 18px;
     height: 18px;
   }
@@ -497,7 +509,7 @@
   .form-filters__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 64px;
+    gap: 60px;
     align-items: center;
   }
 }
@@ -513,7 +525,7 @@
 @media (min-width: @desktop-width) {
   .form-filters__contact-information {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 570px 1fr;
     margin: 0 auto;
     max-width: 1440px;
   }
@@ -524,13 +536,15 @@
 }
 
 @media (min-width: @tablet-width) {
-  padding-bottom: 0;
+  .form-filters__information {
+    padding-bottom: 0;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .form-filters__information {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 570px 1fr;
     padding: 0 110px;
     align-items: center;
     max-width: 1440px;

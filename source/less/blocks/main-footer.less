@@ -59,6 +59,18 @@
 
   .main-footer__link {
     height: 22px;
+
+    color: #666666;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      color: @basic-green;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -71,16 +83,6 @@
 
 .main-footer__link--social {
   padding: 12px;
-
-  &:hover path,
-  &:focus path {
-    fill: @basic-green;
-    outline: none;
-  }
-
-  &:active path {
-    opacity: 0.3;
-  }
 }
 
 .main-footer__social-item {
@@ -94,14 +96,15 @@
   align-items: center;
   min-height: 34px;
   padding-top: 20px;
+  color: #666666;
 
-  &:hover path,
-  &:focus path {
-    fill: @basic-green;
+  &:hover,
+  &:focus {
+    color: @basic-green;
     outline: none;
   }
 
-  &:active path {
+  &:active {
     opacity: 0.3;
   }
 }
@@ -137,15 +140,16 @@
 .main-footer__link--logo {
   padding-top: 10px;
   padding-bottom: 19px;
+  color: #000000;
 
-  &:hover path,
-  &:focus path {
-    fill: #3e3e3e;
+  &:hover,
+  &:focus {
+    color: #3e3e3e;
     outline: none;
   }
 
-  &:active path {
-    fill: #6b6b6b;
+  &:active {
+    color: #6b6b6b;
   }
 }
 

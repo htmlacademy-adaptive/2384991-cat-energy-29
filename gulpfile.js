@@ -71,13 +71,13 @@ const createWebp = () => {
 // SVG
 
 const svg = () => {
-  return gulp.src(['source/img/**/*.svg', ('!source/img/footer/*.svg'), ('!source/img/sprite.svg')])
+  return gulp.src(['source/img/**/*.svg', ('!source/img/footer/*.svg'), ('!source/img/main/example-cat/*.svg'), ('!source/img/sprite.svg')])
   .pipe(svgo())
   .pipe(gulp.dest('build/img'))
 }
 
 const sprite = () => {
-  return gulp.src('source/img/footer/*.svg')
+  return gulp.src(['source/img/footer/*.svg', ('source/img/main/example-cat/example_thumb.svg')])
   .pipe(svgo())
   .pipe(svgstore({
   inlineSvg: true
@@ -144,7 +144,6 @@ export const build = gulp.series(
   createWebp
   ),
   );
-
 
 // Default
 

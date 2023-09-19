@@ -27,7 +27,7 @@
 }
 
 .programs__item-wrapper {
-  padding: 30px 20px 18px 20px;
+  padding: 30px 33px 18px 20px;
   background-color: @basic-gray;
   min-width: 280px;
 }
@@ -40,7 +40,7 @@
 
 @media (min-width: @desktop-width) {
   .programs__item-wrapper {
-    padding: 77px 61px 60px 52px;
+    padding: 77px 61px 61px 52px;
   }
 }
 
@@ -191,7 +191,7 @@
 
 @media (min-width: @desktop-width) {
   .programs__description {
-    margin-bottom: 32px;
+    margin-bottom: 31px;
   }
 }
 
@@ -209,6 +209,11 @@
 
   &:hover {
     background-image: url("../img/main/icon-arrow-hover.svg");
+  }
+
+  &:focus {
+    opacity: 0.7;
+    outline: none;
   }
 
   &:active {
@@ -258,4 +263,3 @@
     margin: 0 auto;
   }
 }
-

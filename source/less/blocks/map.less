@@ -1,14 +1,7 @@
 .map {
   .wrapper {
     padding: 0;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .map {
-    .wrapper {
-      position: relative;
-    }
+    position: relative;
   }
 }
 
@@ -35,6 +28,7 @@
     padding: 60px 75px 60px 80px;
     top: 95px;
     left: calc(50% - 610px);
+    z-index: 2;
   }
 }
 
@@ -93,6 +87,7 @@
   width: 100%;
   max-height: 362px;
   object-fit: cover;
+  position: absolute;
 }
 
 @media (min-width: @tablet-width) {

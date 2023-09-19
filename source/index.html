@@ -9,15 +9,17 @@
     <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body class="page__body page__body--index">
     <header class="main-header">
       <div class="wrapper">
         <a class="main-header__logo" href="#">
           <picture>
-            <source media="(min-width: 1440px)" srcset="./img/logo-desktop.svg" width="70" height="59" alt="Жизнерадостный кот">
-            <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg" width="60" height="50" alt="Жизнерадостный кот">
-          <img class="main-header__logo-image" src="./img/logo-mobile.svg" width="33" height="38" alt="Жизнерадостный кот">
+            <source media="(min-width: 1440px)" srcset="./img/logo-desktop.svg" width="70" height="59">
+            <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg" width="60" height="50">
+            <img class="main-header__logo-image" src="./img/logo-mobile.svg" width="33" height="38" alt="Жизнерадостный кот">
           </picture>
           <img class="main-header__logo-text" src="./img/logo-mobile-text.svg" width="101" height="18" alt="Функциональное питание для котов">
         </a>
@@ -51,8 +53,8 @@
           </div>
         </div>
         <div class="wrapper">
-        <a class="hero__link button" href="form.html">подобрать программу</a>
-      </div>
+          <a class="hero__link button" href="form.html">подобрать программу</a>
+        </div>
       </section>
       <section class="programs">
         <h2 class="visually-hidden">Наши программы</h2>
@@ -85,64 +87,71 @@
       <section class="example">
         <div class="wrapper">
           <h2 class="example__title">Живой пример</h2>
-        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <div class="example__information">
-        <div class="example__container">
-          <div class="example__wrapper">
-          <h3 class="example__subtitle">5 КГ</h3>
-          <span class="example__desc">снижение веса</span>
+          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <div class="example__information">
+            <div class="example__container">
+              <div class="example__wrapper">
+                <h3 class="example__subtitle">5 КГ</h3>
+                <span class="example__desc">снижение веса</span>
+              </div>
+              <div class="example__wrapper">
+                <h3 class="example__subtitle">60 ДНЕЙ</h3>
+                <span class="example__desc">затрачено времени</span>
+              </div>
+            </div>
+            <p class="example__text">Затраты на питание: <span class="example__price">15 000 РУБ.</span></p>
           </div>
-          <div class="example__wrapper">
-          <h3 class="example__subtitle">60 ДНЕЙ</h3>
-          <span class="example__desc">затрачено времени</span>
+          <div class="example__cat">
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/main/example-cat/tablet-fat-cat.webp 1x, ./img/main/example-cat/tablet-fat-cat@2x.webp 2x" width="560" height="512">
+              <source type="image/webp" srcset="./img/main/example-cat/mobile-fat-cat.webp 1x, ./img/main/example-cat/mobile-fat-cat@2x.webp 2x" width="280" height="256">
+              <source media="(min-width: 768px)" srcset="./img/main/example-cat/tablet-fat-cat.png 1x, ./img/main/example-cat/tablet-fat-cat@2x.png 2x" width="560" height="512">
+              <img class="example__image example__image--fat" loading="lazy" src="./img/main/example-cat/mobile-fat-cat.png" width="280" height="256" srcset="./img/main/example-cat/mobile-fat-cat@2x.png 2x" alt="Кот до функционального питания">
+            </picture>
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/main/example-cat/tablet-slim-cat.webp 1x, ./img/main/example-cat/tablet-slim-cat@2x.webp 2x" width="560" height="512">
+              <source type="image/webp" srcset="./img/main/example-cat/mobile-slim-cat.webp 1x, ./img/main/example-cat/mobile-slim-cat@2x.webp 2x" width="280" height="256">
+              <source media="(min-width: 768px)" srcset="./img/main/example-cat/tablet-slim-cat.png 1x, ./img/main/example-cat/tablet-slim-cat@2x.png 2x" width="560" height="512">
+              <img class="example__image example__image--slim" loading="lazy" src="./img/main/example-cat/mobile-slim-cat.png" width="280" height="256" srcset="./img/main/example-cat/mobile-slim-cat@2x.png 2x" alt="Кот после функционального питания">
+            </picture>
+            <button class="example__slider-button button" type="button" data-state="before">
+              <span class="visually-hidden">До/После</span>
+              <svg class="example__slider-image" width="40" height="40">
+                <use xlink:href="img/sprite.svg#example_thumb"></use>
+              </svg>
+            </button>
+          </div>
         </div>
-      </div>
-      <p class="example__text">Затраты на питание: <span class="example__price">15 000 РУБ.</span></p>
-      </div>
-      <div class="example__cat">
-      <picture>
-        <source type="image/webp" media="(min-width: 768px)" srcset="./img/main/example-cat/tablet-fat-cat.webp 1x, ./img/main/example-cat/tablet-fat-cat@2x.webp 2x" width="560" height="512" alt="Кот до функционального питания">
-        <source type="image/webp" srcset="./img/main/example-cat/mobile-fat-cat.webp 1x, ./img/main/example-cat/mobile-fat-cat@2x.webp 2x" width="280" height="256" alt="Кот до функционального питания">
-        <source media="(min-width: 768px)" srcset="./img/main/example-cat/tablet-fat-cat.png 1x, ./img/main/example-cat/tablet-fat-cat@2x.png 2x" width="560" height="512" alt="Кот до функционального питания">
-        <img class="example__image example__image--fat" src="./img/main/example-cat/mobile-fat-cat.png" width="280" height="256" srcset="./img/main/example-cat/mobile-fat-cat@2x.png 2x" alt="Кот до функционального питания">
-      </picture>
-      <picture>
-        <source type="image/webp" media="(min-width: 768px)" srcset="./img/main/example-cat/tablet-slim-cat.webp 1x, ./img/main/example-cat/tablet-slim-cat@2x.webp 2x" width="560" height="512" alt="Кот после функционального питания">
-        <source type="image/webp" srcset="./img/main/example-cat/mobile-slim-cat.webp 1x, ./img/main/example-cat/mobile-slim-cat@2x.webp 2x" width="280" height="256" alt="Кот после функционального питания">
-        <source media="(min-width: 768px)" srcset="./img/main/example-cat/tablet-slim-cat.png 1x, ./img/main/example-cat/tablet-slim-cat@2x.png 2x" width="560" height="512" alt="Кот после функционального питания">
-      <img class="example__image example__image--slim" src="./img/main/example-cat/mobile-slim-cat.png" width="280" height="256" srcset="./img/main/example-cat/mobile-slim-cat@2x.png 2x" alt="Кот после функционального питания">
-      </picture>
-    </div>
       </section>
       <section class="map">
         <div class="wrapper">
           <h2 class="visually-hidden">Адрес Кэт Энерджи</h2>
-          <div class="map__adress-wrapper">
-            <p class="map__description">приглашаем к&nbsp;сотрудничеству дилеров!</p>
-            <p class="map__adress">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8<br><span class="map__city">Санкт-Петербург</span></p>
-          </div>
+            <div class="map__adress-wrapper">
+              <p class="map__description">приглашаем к&nbsp;сотрудничеству дилеров!</p>
+              <p class="map__adress">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8<br><span class="map__city">Санкт-Петербург</span></p>
+            </div>
           <noscript>
-          <picture>
-            <source media="(min-width: 1440px)" srcset="./img/main/map-desktop.jpg 1x, ./img/main/map-desktop@2x.jpg 2x" width="1440" height="400" alt="Карта с расположением Кэт Энерджи">
-            <source media="(min-width: 768px)" srcset="./img/main/map-tablet.jpg 1x, ./img/main/map-tablet@2x.jpg 2x" width="768" height="400" alt="Карта с расположением Кэт Энерджи">
-          <img class="map__image" src="./img/main/map-mobile.jpg" width="320" height="363" srcset="./img/main/map-mobile@2x.jpg 2x" alt="Карта с расположением Кэт Энерджи">
-          </picture>
-        </noscript>
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/main/map-desktop.jpg 1x, ./img/main/map-desktop@2x.jpg 2x" width="1440" height="400">
+              <source media="(min-width: 768px)" srcset="./img/main/map-tablet.jpg 1x, ./img/main/map-tablet@2x.jpg 2x" width="768" height="400">
+              <img class="map__image" loading="lazy" src="./img/main/map-mobile.jpg" width="320" height="363" srcset="./img/main/map-mobile@2x.jpg 2x" alt="Карта с расположением Кэт Энерджи">
+            </picture>
+          </noscript>
           <iframe class="map__location"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5057.307469167069!2d30.31929777725011!3d59.93920871565532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631f6df7d3481%3A0xc0016be317f9a6fd!2sCat%20Energy!5e0!3m2!1scs!2scz!4v1692623989295!5m2!1scs!2scz"
           width="320" height="363"
           style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           title="Офис компании по адресу Большая Конюшенная 19, Санкт-Петербург">
-        </iframe>
+          </iframe>
         </div>
       </section>
     </main>
     <footer class="main-footer">
       <div class="wrapper">
         <a class="main-footer__link main-footer__link--logo main-footer__position style-line" href="#" aria-label="Главная страница сайта CatEnergy">
-            <svg class="main-footer__logo" width="128" height="24">
-              <use href="img/sprite.svg#footer-logo-mobile"></use>
-            </svg>
+          <svg class="main-footer__logo" width="128" height="24">
+            <use href="img/sprite.svg#footer-logo-mobile"></use>
+          </svg>
         </a>
         <ul class="main-footer__social-list style-list style-line">
           <li class="main-footer__social-item">

@@ -6,9 +6,10 @@
 }
 
 .map__adress-wrapper {
-  padding: 26px 20px;
+  padding: 26px 22px 26px 20px;
   display: flex;
   justify-content: space-between;
+  gap: 17px;
 }
 
 @media (min-width: @tablet-width) {
@@ -23,9 +24,9 @@
     position: absolute;
     background-color: #ffffff;
     width: 565px;
-    height: 199px;
-    gap: 0;
-    padding: 60px 75px 60px 80px;
+    min-height: 199px;
+    gap: 17px;
+    padding: 60px 78px 60px 80px;
     top: 95px;
     left: calc(50% - 610px);
     z-index: 2;
@@ -38,34 +39,32 @@
   line-height: 125%;
   font-weight: 400;
   text-transform: uppercase;
-  width: 140px;
   word-wrap: break-word;
+  max-width: min-content;
 }
 
 @media (min-width: @tablet-width) {
   .map__description {
     font-size: 20px;
     line-height: 130%;
-    width: 160px;
   }
 }
 
 .map__adress {
   margin: 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   color: @special-dark-gray;
-  width: 140px;
   word-wrap: break-word;
+  max-width: min-content;
 }
 
 @media (min-width: @tablet-width) {
   .map__adress {
     text-align: right;
     font-size: 16px;
-    width: 160px;
   }
 }
 

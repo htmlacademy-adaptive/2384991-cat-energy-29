@@ -71,13 +71,13 @@ const createWebp = () => {
 // SVG
 
 const svg = () => {
-  return gulp.src(['source/img/**/*.svg', ('!source/img/footer/*.svg'), ('!source/img/main/example-cat/*.svg'), ('!source/img/sprite.svg')])
+  return gulp.src(['source/img/**/*.svg', '!source/img/footer/*.svg', '!source/img/main/example-cat/*.svg', '!source/img/sprite.svg'])
   .pipe(svgo())
   .pipe(gulp.dest('build/img'))
 }
 
 const sprite = () => {
-  return gulp.src(['source/img/footer/*.svg', ('source/img/main/example-cat/example_thumb.svg')])
+  return gulp.src(['source/img/footer/*.svg', 'source/img/main/example-cat/example_thumb.svg'])
   .pipe(svgo())
   .pipe(svgstore({
   inlineSvg: true
@@ -88,11 +88,13 @@ const sprite = () => {
 
 // Copy fonts
 
-const copy = (done) => {
-  gulp.src('source/fonts/**/*.{woff2,woff}')
-  .pipe(gulp.dest('build/fonts'))
-  done();
-  }
+export const copy = (done) => {
+  gulp.src(['source/fonts/**/*.{woff2,woff}', 'source/favicon.ico', 'source/manifest.webmanifest'], {
+    base: 'source'
+    })
+    .pipe(gulp.dest('build'))
+    done();
+    }
 
 // Clean
 
@@ -123,10 +125,10 @@ const reload = (done) => {
 
 // Watcher
 
-const watcher = () => {
+export const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(script));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 // Build

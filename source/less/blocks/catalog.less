@@ -1,5 +1,5 @@
 .catalog {
-  padding-bottom: 25px;
+  padding-bottom: 26px;
 }
 
 @media (min-width: @tablet-width) {
@@ -39,7 +39,7 @@
 }
 
 .catalog__card {
-  padding: 20px 20px 24px 20px;
+  padding: 21px 20px 23.5px 20px;
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: 1fr 0.25fr;
@@ -158,6 +158,15 @@
   margin: 0;
   margin-bottom: 14px;
   margin-right: calc(100% - 73px);
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -181,11 +190,11 @@
   text-align: center;
   background-image: url("../img/catalog/catalog-plus.svg");
   background-repeat: no-repeat;
-  background-position: top 29px center;
+  background-position: top 25px center;
 
   .catalog__subtitle {
     color: #111111;
-    margin: 62px 0  9px 0;
+    margin: 57px 0  9px 0;
   }
 
   .button:hover,
@@ -240,7 +249,7 @@
 
 .catalog__table,
 .catalog__description {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -265,6 +274,11 @@
   .catalog__table {
     margin-bottom: 19px;
   }
+}
+
+.catalog__first-column,
+.catalog__second-column {
+  padding: 1px 0 1px 0;
 }
 
 @media (min-width: @tablet-width) {

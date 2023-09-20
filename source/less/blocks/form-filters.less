@@ -443,6 +443,10 @@
   position: relative;
 }
 
+.form-filters__control-label:focus {
+  opacity: 0.8;
+}
+
 .form-filters__control-input {
   position: absolute;
   top: -3px;
@@ -455,11 +459,15 @@
   appearance: none;
   margin: 0;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: #bababa;
+  }
+
+  &:focus {
+    border-color: #666666;
     outline: none;
   }
+
 
   &:disabled {
     border-color: rgba(186, 186, 186, 0.3);

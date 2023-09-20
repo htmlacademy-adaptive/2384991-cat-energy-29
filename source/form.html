@@ -46,20 +46,22 @@
         <p class="form__description">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
         <form class="form-filters" action="https://echo.htmlacademy.ru/" method="post">
           <div class="form-filters__information">
-            <fieldset class="form-filters__group wrapper">
+            <fieldset class="form-filters__group">
               <legend class="visually-hidden">Персональные данные кота</legend>
-              <label class="form-filters__label">
-                <span class="form-filters__text">Имя:*</span>
-                <input class="form-filters__input" type="text" name="cat-name" value="Барсик" placeholder="Укажите имя" required>
-              </label>
-              <label class="form-filters__label">
-                <span class="form-filters__text">Вес (кг):*</span>
-                <input class="form-filters__input" type="text" name="cat-weight" value="7" placeholder="Укажите вес" required>
-              </label>
-              <label class="form-filters__label">
-                <span class="form-filters__text">Возраст (лет):</span>
-                <input class="form-filters__input" type="text" name="cat-age" value="7" placeholder="Укажите возраст">
-              </label>
+              <div class="wrapper">
+                <label class="form-filters__label">
+                  <span class="form-filters__text">Имя:*</span>
+                  <input class="form-filters__input" type="text" name="cat-name" value="Барсик" placeholder="Укажите имя" required>
+                </label>
+                <label class="form-filters__label">
+                  <span class="form-filters__text">Вес (кг):*</span>
+                  <input class="form-filters__input" type="text" name="cat-weight" value="7" placeholder="Укажите вес" required>
+                </label>
+                <label class="form-filters__label">
+                  <span class="form-filters__text">Возраст (лет):</span>
+                  <input class="form-filters__input" type="text" name="cat-age" value="7" placeholder="Укажите возраст">
+                </label>
+              </div>
             </fieldset>
             <fieldset class="form-filters__group style-line style-line--top">
               <legend class="visually-hidden">Цель программы питания:</legend>

@@ -31,6 +31,15 @@
 
 .main-header__logo {
   display: block;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .main-header__logo-text {
@@ -40,14 +49,6 @@
   transform: translateX(-50%);
   padding-top: 10px;
   padding-bottom: 10px;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
 }
 
 @media (min-width: @tablet-width) {
@@ -75,14 +76,6 @@
 .main-header__logo-image {
   position: absolute;
   top: 13px;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
 }
 
 @media (min-width: @tablet-width) {

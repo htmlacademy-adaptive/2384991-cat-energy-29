@@ -2,7 +2,7 @@
 .form-filters__comment,
 .form-filters__list,
 .form-filters__input {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
@@ -49,7 +49,7 @@
 .form-filters__group--contacts {
   .form-filters__title {
     margin-top: 0;
-    margin-bottom: 35px;
+    margin-bottom: 34px;
   }
 }
 
@@ -165,7 +165,7 @@
 @media (min-width: @tablet-width) {
   .form-filters__label--email {
     .form-filters__input {
-      background-position: top 15px right 14px;
+      background-position: top 17px right 14px;
     }
   }
 
@@ -209,13 +209,20 @@
   }
 }
 
+.form-filters__text {
+  min-width: max-content;
+}
+
 .form-filters__input {
   flex-grow: 1;
   margin-left: 14px;
   padding: 13px 14px 12px 14px;
-  border: 1px solid #e7e7e7;
+  border: 2px solid transparent;
+  outline: 1px solid #e7e7e7;
+  width: 100%;
 
   &:hover {
+    outline: none;
     border-color: #cdcdcd;
   }
 
@@ -237,12 +244,14 @@
 
 .form-filters__comment {
   padding: 13px 14px 12px 14px;
-  border: 1px solid #e7e7e7;
+  border: 2px solid transparent;
+  outline: 1px solid #e7e7e7;
   width: 100%;
-  min-height: 175px;
+  min-height: 150px;
   resize: none;
 
   &:hover {
+    outline: none;
     border-color: #cdcdcd;
   }
 
@@ -256,6 +265,7 @@
   .form-filters__comment {
     margin-top: 0;
     padding: 10px 19px;
+    min-height: 175px;
   }
 }
 
@@ -276,7 +286,7 @@
 }
 
 .form-filters__list--programs {
-  padding: 27px 0 24px 0;
+  padding: 28px 0 24px 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -405,7 +415,7 @@
   display: block;
   min-width: 153px;
   text-align: center;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
@@ -425,7 +435,7 @@
 
 @media (min-width: @tablet-width) {
   .form-filters__control-label {
-    padding-left: 60px;
+    padding-left: 59px;
   }
 }
 
@@ -435,7 +445,7 @@
 
 .form-filters__control-input {
   position: absolute;
-  top: -6px;
+  top: -3px;
   left: 0;
   width: 30px;
   height: 30px;
@@ -485,7 +495,7 @@
 
 .form-filters__radio:checked + .form-filters__control-label::before {
   position: absolute;
-  top: 2.5px;
+  top: 5.5px;
   left: 8.5px;
   width: 13px;
   height: 13px;
@@ -535,7 +545,7 @@
 }
 
 .form-filters__information {
-  padding-bottom: 2px;
+  padding-bottom: 3px;
 }
 
 @media (min-width: @tablet-width) {
@@ -549,7 +559,6 @@
     display: grid;
     grid-template-columns: 570px 1fr;
     padding: 0 110px;
-    align-items: center;
     max-width: 1440px;
     margin: 0 auto;
 

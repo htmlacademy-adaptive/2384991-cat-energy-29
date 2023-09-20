@@ -39,6 +39,7 @@
 @media (min-width: @tablet-width) {
   .main-nav__list {
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 34px;
     position: static;
     content: "";
@@ -74,7 +75,7 @@
   height: 2px;
   background-color: #000000;
   top: 2px;
-  left: 0;
+  left: -1px;
   box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
 }
 
@@ -86,6 +87,7 @@
 .main-nav--closed .main-nav__toggle:focus::before {
   background-color: #8f8f8f;
   box-shadow: 0 8px 0 0 #8f8f8f, 0 16px 0 0 #8f8f8f;
+  outline: none;
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -118,6 +120,7 @@
 .main-nav--opened .main-nav__toggle:focus::before,
 .main-nav--opened .main-nav__toggle:focus::after {
   background-color: #8f8f8f;
+  outline: none;
 }
 
 @media (max-width: @mobile-width-only) {
